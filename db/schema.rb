@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20170130195702) do
 
+<<<<<<< HEAD
   create_table "advertisements", force: :cascade do |t|
     t.string   "title"
     t.text     "copy"
@@ -21,6 +22,8 @@ ActiveRecord::Schema.define(version: 20170130195702) do
     t.datetime "updated_at", null: false
   end
 
+=======
+>>>>>>> checkpoint-35-validating
   create_table "comments", force: :cascade do |t|
     t.text     "body"
     t.integer  "post_id"
@@ -40,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170130195702) do
 
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
 
+<<<<<<< HEAD
   create_table "questions", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
@@ -48,6 +52,8 @@ ActiveRecord::Schema.define(version: 20170130195702) do
     t.datetime "updated_at", null: false
   end
 
+=======
+>>>>>>> checkpoint-35-validating
   create_table "topics", force: :cascade do |t|
     t.string   "name"
     t.boolean  "public",      default: true

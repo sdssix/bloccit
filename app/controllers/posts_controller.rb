@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> checkpoint-35-validating
   def show
     @post = Post.find(params[:id])
   end

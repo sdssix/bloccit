@@ -2,12 +2,21 @@ Rails.application.routes.draw do
   resources :topics do
  # #34
      resources :posts, except: [:index]
+<<<<<<< HEAD
+=======
+     # resources :posts do
+     # end
+>>>>>>> checkpoint-35-validating
    end
    
    
   get 'about' => 'welcome#about'
   
+<<<<<<< HEAD
   root 'welcome#index'
+=======
+  root to: 'welcome#index'
+>>>>>>> checkpoint-35-validating
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
