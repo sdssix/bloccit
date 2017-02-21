@@ -1,11 +1,9 @@
 module ApplicationHelper
-<<<<<<< HEAD
-=======
-       def form_group_tag(errors, &block)
-     css_class = 'form-group'
-     css_class << ' has-error' if errors.any?
-# #5
-     content_tag :div, capture(&block), class: css_class
-   end
->>>>>>> checkpoint-35-validating
+  def form_group_tag(errors, &block)
+    if errors.any?
+      content_tag :div, capture(&block), class: 'form-group has-error'
+    else
+      content_tag :div, capture(&block), class: 'form-group'
+    end
+  end  
 end
