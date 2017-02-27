@@ -34,3 +34,6 @@
  # Used for encrypting User passwords
  gem 'bcrypt'
  gem 'pry-rails', :group => :development
+ #fiagro gem for safe sendgrid id/pw saving
+ gem 'figaro', '1.0'
+  

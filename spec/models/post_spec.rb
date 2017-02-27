@@ -9,7 +9,8 @@ RSpec.describe Post, type: :model do
 
   it { should have_many(:comments) }
   it { is_expected.to have_many(:votes) }
-  
+  it { is_expected.to have_many(:favorites) }
+ 
   # Shoulda tests for Topic
   it { should belong_to(:topic) }
   it { should validate_presence_of(:topic) }
