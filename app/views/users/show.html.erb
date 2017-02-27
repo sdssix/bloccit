@@ -1,26 +1,24 @@
- <div class="row">
+ <% if user_has_favorites?(@user) %>
+  <h2> Favorite Posts </h2>
+  <% @user.favorites.each do |favorite| %>.
+  
+  <div class="row">
    <div class="col-md-8">
      <div class="media">
        <br />
-       <% avatar_url = @user.avatar_url(128) %>
-       <% if avatar_url %>
+       <% avatar_url = User.avatar_url(@user, 64) %>
+       <% unless avatar_url.nil? %>
          <div class="media-left">
            <%= image_tag avatar_url, class: 'media-object' %>
          </div>
        <% end %>
        <div class="media-body">
-         <h2 class="media-heading"><%= @user.name %></h2>
-         <small>
-           <%= pluralize(@user.posts.count, 'post') %>,
-           <%= pluralize(@user.comments.count, 'comment') %>
-         </small>
+         <h3 class="media-heading"> <%= render partial: 'posts/post', locals: { post: favorite.post } %> </h3>
        </div>
      </div>
    </div>
- </div>
+  </div>
+  
  
- <h2>Posts</h2>
- <%= render @user.posts %>
- 
- <h2>Comments</h2>
- <%= render @user.comments %>
+  <% end %>
+  <% end %>
