@@ -3,15 +3,14 @@
    before_action :authorize_user
  
    def show
-     user = User.find(params[:id])
- # #17
+    user = User.find(params[:id])
      render json: user, status: 200
    end
  
    def index
      users = User.all
- # #18
-     render json: users, status: 200
+    render json: users, status: 200
+
    end
   
    def update
